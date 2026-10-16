@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1a1f2e"/>
+      <stop offset="100%" stop-color="#0a0d14"/>
+    </radialGradient>
+    <radialGradient id="accent" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#d4a845" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#d4a845" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <ellipse cx="600" cy="315" rx="500" ry="300" fill="url(#accent)"/>
+
+  <text x="600" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#d4a845" letter-spacing="4">IPTV FRANCE · 55 000 CHAÎNES · 4K</text>
+
+  <text x="600" y="320" text-anchor="middle" font-family="Georgia, serif" font-size="80" font-weight="600" fill="#efede8">TVPrime<tspan fill="#d4a845">4K</tspan></text>
+
+  <text x="600" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" fill="#9aa2b4">Le meilleur abonnement IPTV France</text>
+
+  <rect x="470" y="470" width="260" height="60" rx="10" fill="#d4a845"/>
+  <text x="600" y="510" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="700" fill="#15110a">Dès 24,99€ · Garantie 7 jours</text>
+</svg>

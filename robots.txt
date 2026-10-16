@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_build.py
+Disallow: /_partials/
+
+Sitemap: https://fr.tvprime4k.com/sitemap.xml

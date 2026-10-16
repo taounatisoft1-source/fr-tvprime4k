@@ -1,0 +1,61 @@
+# ==========================================================================
+# TVPrime4K FR — Apache config (Hostinger, SiteGround, cPanel, etc.)
+# ==========================================================================
+
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force www or non-www (uncomment the one you want)
+# RewriteCond %{HTTP_HOST} ^www\.fr\.tvprime4k\.com$ [NC]
+# RewriteRule ^(.*)$ https://fr.tvprime4k.com/$1 [L,R=301]
+
+# Pretty URLs — strip index.html
+RewriteCond %{THE_REQUEST} ^GET\ (.*)/index\.html\ HTTP
+RewriteRule ^(.*)index\.html$ /$1 [L,R=301]
+
+# Add trailing slash to directories (helps SEO consistency)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+# Error pages
+ErrorDocument 404 /404.html
+
+# Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json application/xml
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
+# Block access to Python build script and dotfiles
+<FilesMatch "^(\._build\.py|\.htaccess|\.git.*|\.env.*)$">
+  Require all denied
+</FilesMatch>
+
+# MIME types
+AddType image/svg+xml .svg
+AddType application/manifest+json .webmanifest
