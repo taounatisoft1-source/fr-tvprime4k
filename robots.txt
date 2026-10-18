@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /_build.py
-Disallow: /_partials/
+Disallow: /.gitignore
+Disallow: /_sync.log
+Disallow: /_cleanup_ok.txt
 
 Sitemap: https://fr.tvprime4k.com/sitemap.xml
