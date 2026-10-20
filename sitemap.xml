@@ -47,6 +47,14 @@
   <url><loc>https://fr.tvprime4k.com/iptv-canal-plus/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://fr.tvprime4k.com/iptv-ligue-1/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
+  <!-- Blog -->
+  <url><loc>https://fr.tvprime4k.com/blog/</loc><lastmod>2026-10-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fr.tvprime4k.com/blog/comment-installer-iptv-fire-tv-stick/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fr.tvprime4k.com/blog/comment-installer-iptv-samsung-smart-tv/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fr.tvprime4k.com/blog/comment-installer-iptv-iphone-ipad/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fr.tvprime4k.com/blog/comment-installer-iptv-android-tv/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://fr.tvprime4k.com/blog/comment-configurer-iptv-smarters-pro/</loc><lastmod>2026-10-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
   <!-- Legal pages -->
   <url><loc>https://fr.tvprime4k.com/cgv/</loc><lastmod>2026-10-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://fr.tvprime4k.com/confidentialite/</loc><lastmod>2026-10-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>

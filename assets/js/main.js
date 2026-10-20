@@ -199,6 +199,42 @@
     });
   }
 
+  /* ---------- Countdown timer (resets to midnight each day) ---------- */
+  function initCountdown() {
+    const el = document.getElementById("countdown");
+    if (!el) return;
+    function pad(n) { return n < 10 ? "0" + n : "" + n; }
+    function tick() {
+      const now = new Date();
+      const end = new Date();
+      end.setHours(24, 0, 0, 0); // next midnight (local time)
+      let diff = end - now;
+      if (diff < 0) diff = 0;
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      el.textContent = pad(h) + ":" + pad(m) + ":" + pad(s);
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  /* ---------- Testimonials carousel ---------- */
+  function initTestimonials() {
+    const track = document.getElementById("testimonialsTrack");
+    const prev = document.getElementById("testimonialPrev");
+    const next = document.getElementById("testimonialNext");
+    if (!track || !prev || !next) return;
+    function scrollBy(dir) {
+      const card = track.querySelector(".testimonial");
+      if (!card) return;
+      const step = card.getBoundingClientRect().width + 20;
+      track.scrollBy({ left: dir * step, behavior: "smooth" });
+    }
+    prev.addEventListener("click", () => scrollBy(-1));
+    next.addEventListener("click", () => scrollBy(1));
+  }
+
   /* ---------- Smooth anchors ---------- */
   function initAnchors() {
     document.addEventListener("click", e => {
@@ -226,5 +262,7 @@
     initPromo();
     initExitIntent();
     initAnchors();
+    initCountdown();
+    initTestimonials();
   }
 })();

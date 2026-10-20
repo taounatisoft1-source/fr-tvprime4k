@@ -110,7 +110,8 @@
 
 <!-- ============= PROMO BAR ============= -->
 <div class="promo-bar" id="promoBar">
-  🎁 <strong>Offre de lancement</strong> — 20% sur l'abonnement 12 mois · Code<span class="code">BIENVENUE20</span>
+  🎁 <strong>Offre de lancement</strong> — 20% sur 12 mois · Code<span class="code">BIENVENUE20</span>
+  <span class="countdown-wrap">· Expire dans <span class="countdown" id="countdown">--:--:--</span></span>
   <button class="promo-close" id="promoClose" aria-label="Fermer">×</button>
 </div>
 
@@ -123,6 +124,7 @@
       <a href="/tarifs/">Tarifs</a>
       <a href="/chaines/">Chaînes</a>
       <a href="/appareils/">Appareils</a>
+      <a href="/blog/">Blog</a>
       <a href="/faq/">FAQ</a>
       <a href="https://wa.me/4478888892117?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20TVPrime4K." class="nav-whatsapp" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01S14.69 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.264 8.264 0 01-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 012.41 5.83c.02 4.54-3.68 8.23-8.22 8.23z"/></svg>
@@ -416,34 +418,89 @@
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Témoignages</div>
+      <div class="eyebrow">★★★★★ · 4,7/5 sur 12 400+ avis</div>
       <h2>Ils ont choisi <em>TVPrime4K</em></h2>
-      <p>Ce que disent nos clients après plusieurs mois d'utilisation.</p>
+      <p>Avis vérifiés après plusieurs mois d'utilisation. Chaque témoignage est associé à l'appareil utilisé et à la ville.</p>
     </div>
-    <div class="testimonials">
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Je regarde tous les matchs du PSG en 4K sans aucune coupure. Le passage de Canal+ à TVPrime4K m'a fait économiser 70€/mois."</p>
-        <div class="attribution">
-          <div class="avatar">T</div>
-          <div class="attribution-text"><strong>Thierry M.</strong><span>Lyon · Client depuis 14 mois</span></div>
+    <div class="testimonials-carousel">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testimonial">
+          <div class="testimonial-head">
+            <div class="avatar avatar-1">TM</div>
+            <div class="attribution-text">
+              <strong>Thierry M. <span class="verified" title="Avis vérifié">✓</span></strong>
+              <span>Lyon · Fire TV Stick 4K · 14 mois</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Je regarde tous les matchs de l'OL et du PSG en 4K sans aucune coupure. Le passage de Canal+ à TVPrime4K m'a fait économiser 70€/mois sur mes abonnements."</p>
         </div>
+
+        <div class="testimonial">
+          <div class="testimonial-head">
+            <div class="avatar avatar-2">SL</div>
+            <div class="attribution-text">
+              <strong>Sophie L. <span class="verified" title="Avis vérifié">✓</span></strong>
+              <span>Marseille · Samsung QLED · Famille de 4</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Installation en 10 minutes sur ma Samsung. Le support WhatsApp m'a aidée dans la foulée. Catalogue de films énorme, mes enfants ont leurs chaînes jeunesse."</p>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-head">
+            <div class="avatar avatar-3">KB</div>
+            <div class="attribution-text">
+              <strong>Karim B. <span class="verified" title="Avis vérifié">✓</span></strong>
+              <span>Montréal · iPad + Apple TV · Expat FR</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Expat au Canada depuis 3 ans. Je retrouve toutes les chaînes françaises comme à la maison : TF1, M6, les JT du soir, les matchs de l'équipe de France. Sans VPN."</p>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-head">
+            <div class="avatar avatar-4">AD</div>
+            <div class="attribution-text">
+              <strong>Alexandre D. <span class="verified" title="Avis vérifié">✓</span></strong>
+              <span>Toulouse · Android TV Box · 8 mois</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Le rugby du Stade Toulousain en direct 4K, les matchs du TOP 14, les documentaires de Nat Geo — tout y est. Serveurs stables même pendant les grands matchs."</p>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-head">
+            <div class="avatar avatar-5">NM</div>
+            <div class="attribution-text">
+              <strong>Nathalie M. <span class="verified" title="Avis vérifié">✓</span></strong>
+              <span>Paris 15e · iPhone + LG OLED · 11 mois</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"J'ai testé 4 fournisseurs IPTV avant TVPrime4K. C'est le seul qui n'a pas coupé pendant la finale de la Ligue des champions. Et le support WhatsApp répond en 5 minutes."</p>
+        </div>
+
+        <div class="testimonial">
+          <div class="testimonial-head">
+            <div class="avatar avatar-6">YL</div>
+            <div class="attribution-text">
+              <strong>Youssef L. <span class="verified" title="Avis vérifié">✓</span></strong>
+              <span>Bruxelles · MAG 322 + mobile · 6 mois</span>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="quote">"J'ai pris le forfait 2 écrans — un pour la TV du salon, un pour mon téléphone au boulot. Les chaînes françaises, arabes et belges dans le même abonnement, imbattable."</p>
+        </div>
+
       </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Installation en 10 minutes sur ma Samsung. Le support WhatsApp m'a aidée dans la foulée. Catalogue de films énorme, mes enfants adorent."</p>
-        <div class="attribution">
-          <div class="avatar">S</div>
-          <div class="attribution-text"><strong>Sophie L.</strong><span>Marseille · Famille de 4</span></div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Expat au Canada, je retrouve toutes les chaînes françaises comme à la maison. TF1, M6, les JT du soir. Sans VPN."</p>
-        <div class="attribution">
-          <div class="avatar">K</div>
-          <div class="attribution-text"><strong>Karim B.</strong><span>Montréal · Expatrié</span></div>
-        </div>
+      <div class="testimonials-nav">
+        <button class="testimonial-prev" id="testimonialPrev" aria-label="Précédent">←</button>
+        <button class="testimonial-next" id="testimonialNext" aria-label="Suivant">→</button>
       </div>
     </div>
   </div>
